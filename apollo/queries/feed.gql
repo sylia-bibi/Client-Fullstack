@@ -1,0 +1,10 @@
+query Feed($filter:String){
+    feed(filter:$filter)
+  {
+      id,
+      title,
+       price,
+       description,
+       imageUrl,
+    }}
+
