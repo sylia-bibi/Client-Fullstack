@@ -1,42 +1,60 @@
 <template>
   <div class="flex items-center min-h-screen bg-gray-50 dark:bg-gray-900">
-    <div class="page__signup mx-auto">
-    <TitlePage titleText="contact" class="title title-1"/>
-    <form class="contact__form">
-      <div class="form__group">
-        <label htmlFor="firstName">FirstName</label>
-        <input type="text" v-model="firstName" />
-      </div>
-      <div class="form__group">
-        <label htmlFor="lastName">LastName</label>
-        <input type="text" v-model="lastName" />
-      </div>
-     <div class="form__group">
-        <label htmlFor="adress">Adress</label>
-        <input type="adress" v-model="adress" />
-      </div>
-    
-      <div class="form__group">
-        <label htmlFor="email">Email</label>
-        <input type="email" v-model="email" />
-      </div>
-      <div class="form__group">
-        <label htmlFor="mobile">Mobile</label>
-        <input type="mobile" v-model="mobile" />
-      </div>
-      <div class="form__group">
-        <label htmlFor="password">Password</label>
-        <input type="text" v-model="password" />
-      </div>    
-      <div class="form__group">
-        <button class="submitBtn" type="button" @click.prevent="signup">SignUp</button>
-      </div>
-      <div class="success__message" v-if="successMessage">
-        {{successMessage}}
-      </div>
-      </form>
+    <div class="container mx-auto">
+        <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+            <div class="text-center">
+                <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">Inscription</h1>
+                <p class="text-gray-400 dark:text-gray-400">Remplissez le formulaire suivant afin de vous inscrire</p>
+            </div>
+            <div class="m-7">
+                <form >
+
+                    <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                    <input type="checkbox" name="botcheck" id="" style="display: none;">
+
+
+                    <div class="mb-6">
+                        <label for="firstName" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">FirstName</label>
+                        <input type="text" v-model="firstName" name="name" id="name" placeholder="your firstname" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="lastName" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">LastName</label>
+                        <input type="text" v-model="lastName" name="lastname" id="lastname" placeholder=" your lastname" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                     <div class="mb-6">
+                        <label for="passWord" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">PassWord</label>
+                        <input type="text" v-model="passWord" name="passWord" id="passWord" placeholder="mot de passe" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
+                        <input v-model="email" type="email" name="email" id="email" placeholder="email" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="mobile" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Mobile</label>
+                        <input v-model="mobile" type="mobile" name="mobile" id="email" placeholder="0987655444" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="adress" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Adress-ville</label>
+                        <input v-model="mobile" type="adress" name="adress" id="adress" placeholder=" 10 rue de la paix 83000" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div class="mb-6">
+
+                        <label for="age" class="text-sm text-gray-600 dark:text-gray-400">Age</label>
+                        <input type="number" v-model="age" name="age" id="age" placeholder="votre age" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                   
+                    <div class="mb-6">
+                        <button @click.prevent="signup" class="w-full px-3 py-4 text-white bg-pink-500 rounded-md focus:bg-orange-600 focus:outline-none">Sign up</button>
+                    </div>                
+                </form>
+                  <div class="message__error" v-if="messageError"> 
+                    {{ messageError }}
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
 </template>
 
 <script>
