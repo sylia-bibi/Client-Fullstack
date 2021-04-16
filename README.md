@@ -8,6 +8,8 @@
 <img width="941" alt="detail" src="https://user-images.githubusercontent.com/69635011/114935868-fb38e100-9e3b-11eb-974e-893f8c4d9709.PNG">
 => Panier
 <img width="956" alt="panier" src="https://user-images.githubusercontent.com/69635011/114935977-1efc2700-9e3c-11eb-9b57-38700dc5c0a2.PNG">
+# Accueil
+<img width="934" alt="accueil" src="https://user-images.githubusercontent.com/69635011/115006382-1857c900-9ea9-11eb-9017-5e161e8df3eb.PNG">
 
 ## Build Setup
 
