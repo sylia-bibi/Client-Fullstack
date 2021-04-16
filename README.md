@@ -1,6 +1,6 @@
 => Travail réalisé par : BIBI CYLIA M1 DEV WEB
 
-=> Heroku git URL :   https://git.heroku.com/client-fullstack.git
+=> Netlify git URL :  https://60795a72417789000738e1b7--compassionate-boyd-9db959.netlify.app/
 # ynov-eshop
 # Page eshop
 <img width="943" alt="eshop" src="https://user-images.githubusercontent.com/69635011/114935805-ec522e80-9e3b-11eb-9262-656fa3208d74.PNG">
